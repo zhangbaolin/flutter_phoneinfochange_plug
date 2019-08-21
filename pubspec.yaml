@@ -1,8 +1,8 @@
 name: flutter_phoneinfochange_plug
 description: A new Flutter plugin.
 version: 0.0.1
-author:
-homepage:
+author:zhangbaolin
+homepage:https://github.com/zhangbaolin/flutter_phoneinfochange_plug
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

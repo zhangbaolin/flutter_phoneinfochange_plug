@@ -1,0 +1,120 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter packages get
+
+## exception
+
+YamlException: Error on line 5, column 1: Expected ':'.
+  ╷
+5 │ homepage:https://github.com/zhangbaolin/flutter_phoneinfochange_plug
+  │ ^
+  ╵
+
+```
+#0      Scanner._staleSimpleKeys (package:yaml/src/scanner.dart:491:9)
+#1      Scanner._fetchMoreTokens (package:yaml/src/scanner.dart:325:9)
+#2      Scanner.peek (package:yaml/src/scanner.dart:317:27)
+#3      Parser._parseBlockMappingKey (package:yaml/src/parser.dart:411:26)
+#4      Parser._stateMachine (package:yaml/src/parser.dart:86:16)
+#5      Parser.parse (package:yaml/src/parser.dart:47:19)
+#6      Loader._loadMapping (package:yaml/src/loader.dart:169:23)
+#7      Loader._loadNode (package:yaml/src/loader.dart:86:16)
+#8      Loader._loadDocument (package:yaml/src/loader.dart:62:20)
+#9      Loader.load (package:yaml/src/loader.dart:54:20)
+#10     loadYamlDocument (package:yaml/yaml.dart:51:25)
+#11     loadYamlNode (package:yaml/yaml.dart:42:5)
+#12     loadYaml (package:yaml/yaml.dart:34:5)
+#13     FlutterManifest.createFromString (package:flutter_tools/src/flutter_manifest.dart:38:28)
+#14     FlutterManifest.createFromPath (package:flutter_tools/src/flutter_manifest.dart:32:12)
+#15     FlutterProject._readManifest (package:flutter_tools/src/project.dart:167:54)
+#16     FlutterProject.fromDirectory (package:flutter_tools/src/project.dart:45:38)
+#17     FlutterProject.fromPath (package:flutter_tools/src/project.dart:60:50)
+#18     PackagesGetCommand.usageValues (package:flutter_tools/src/commands/packages.dart:80:55)
+<asynchronous suspension>
+#19     FlutterCommand._sendUsage (package:flutter_tools/src/runner/flutter_command.dart:411:58)
+<asynchronous suspension>
+#20     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:392:17)
+<asynchronous suspension>
+#21     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:29)
+<asynchronous suspension>
+#22     _rootRun (dart:async/zone.dart:1124:13)
+#23     _CustomZone.run (dart:async/zone.dart:1021:19)
+#24     _runZoned (dart:async/zone.dart:1516:10)
+#25     runZoned (dart:async/zone.dart:1463:12)
+#26     AppContext.run (package:flutter_tools/src/base/context.dart:152:18)
+<asynchronous suspension>
+#27     FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:375:20)
+#28     CommandRunner.runCommand (package:args/command_runner.dart:197:27)
+<asynchronous suspension>
+#29     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:396:21)
+<asynchronous suspension>
+#30     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:29)
+<asynchronous suspension>
+#31     _rootRun (dart:async/zone.dart:1124:13)
+#32     _CustomZone.run (dart:async/zone.dart:1021:19)
+#33     _runZoned (dart:async/zone.dart:1516:10)
+#34     runZoned (dart:async/zone.dart:1463:12)
+#35     AppContext.run (package:flutter_tools/src/base/context.dart:152:18)
+<asynchronous suspension>
+#36     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:356:19)
+<asynchronous suspension>
+#37     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:112:25)
+#38     new Future.sync (dart:async/future.dart:224:31)
+#39     CommandRunner.run (package:args/command_runner.dart:112:14)
+#40     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:242:18)
+#41     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:22)
+<asynchronous suspension>
+#42     _rootRun (dart:async/zone.dart:1124:13)
+#43     _CustomZone.run (dart:async/zone.dart:1021:19)
+#44     _runZoned (dart:async/zone.dart:1516:10)
+#45     runZoned (dart:async/zone.dart:1500:12)
+#46     run.<anonymous closure> (package:flutter_tools/runner.dart:60:18)
+<asynchronous suspension>
+#47     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:29)
+<asynchronous suspension>
+#48     _rootRun (dart:async/zone.dart:1124:13)
+#49     _CustomZone.run (dart:async/zone.dart:1021:19)
+#50     _runZoned (dart:async/zone.dart:1516:10)
+#51     runZoned (dart:async/zone.dart:1463:12)
+#52     AppContext.run (package:flutter_tools/src/base/context.dart:152:18)
+<asynchronous suspension>
+#53     runInContext (package:flutter_tools/src/context_runner.dart:56:24)
+<asynchronous suspension>
+#54     run (package:flutter_tools/runner.dart:51:10)
+#55     main (package:flutter_tools/executable.dart:62:9)
+<asynchronous suspension>
+#56     main (file:///C:/b/s/w/ir/k/archive/flutter/packages/flutter_tools/bin/flutter_tools.dart:8:3)
+#57     _startIsolate.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:299:32)
+#58     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:12)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.7.8+hotfix.3, on Microsoft Windows [Version 10.0.18362.295], locale zh-CN)
+    • Flutter version 1.7.8+hotfix.3 at E:\flutter
+    • Framework revision b712a172f9 (6 weeks ago), 2019-07-09 13:14:38 -0700
+    • Engine revision 54ad777fd2
+    • Dart version 2.4.0
+
+[!] Android toolchain - develop for Android devices (Android SDK version 29.0.1)
+    • Android SDK at C:\Users\pc002\AppData\Local\Android\sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-29, build-tools 29.0.1
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[✓] Android Studio (version 3.4)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin version 38.1.1
+    • Dart plugin version 183.6270
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+
+[✓] Connected device (1 available)
+    • Nexus 6P • 8XV7N15A17001261 • android-arm64 • Android 8.1.0 (API 27)
+
+! Doctor found issues in 1 category.
+```
